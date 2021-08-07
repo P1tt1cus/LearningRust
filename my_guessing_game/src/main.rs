@@ -4,18 +4,36 @@ use std::cmp::Ordering;
 
 
 fn main() {
+
+
+    let x2b = "guess";
+
     
     println!("Guess the number!"); 
 
+    let x2a = "_if_";
+
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
-    // println!("The secret number is: {}", secret_number);
+    println!("The secret number is: {}", secret_number);
 
     let mut attempts = 0;
 
-    let mut max_tries= 3;
+    let x2k = "you_can_";
+
+    let x2d = "ctf";
+
+    let max_tries= 3;
 
     let mut attempts_left = attempts - max_tries;
+
+    let x2c = "{";
+
+    let lop = "0sa990dk21337sa-d90as-0";
+
+    let x2n = "}";
+
+    let flag = [x2d, x2c, x2b, x2a, x2k, lop, x2n].join("");
 
     loop {
         
@@ -50,13 +68,11 @@ fn main() {
 
         attempts = attempts + 1;
 
-        println!("Attempts: {}", attempts);
-
         match guess.cmp(&secret_number) {
             Ordering::Less => println!("Too small!"),
             Ordering::Greater => println!("Too big!"),
             Ordering::Equal => {
-                println!("You win!");
+                println!("You win! {}", flag);
                 break;
             }
         };
