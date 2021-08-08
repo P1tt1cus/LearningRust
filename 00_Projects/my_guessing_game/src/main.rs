@@ -13,9 +13,9 @@ fn main() {
 
     let x2a = "_if_";
 
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let secret_number = rand::thread_rng().gen_range(1..=1000);
 
-    println!("The secret number is: {}", secret_number);
+    // println!("The secret number is: {}", secret_number);
 
     let mut attempts = 0;
 
