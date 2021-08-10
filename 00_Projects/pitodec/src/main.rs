@@ -5,7 +5,7 @@
 
 fn main() {
     // String to encode
-    let message = String::from("thisIsAString++=@#IlikeCatsandFISHANDCATs=!!()");
+    let message = String::from("ctf{w3ll_D0n3_d3c0d3r_22}");
 
     encode(message)
 
@@ -26,8 +26,8 @@ fn encode(message: String) {
     let mut unencoded_vec: Vec<String> = Vec::new();  
     let mut encoded_vec: Vec<String> = Vec::new();
 
-    let first_four_enc: String = "1100".to_string();
-    let last_four_enc: String = "1000".to_string();
+    let first_four_enc = "1100";
+    let last_four_enc = "1000";
 
     // For loop over the cloned string and convert it into bytes 
     for c in message.clone().into_bytes() {
@@ -35,7 +35,7 @@ fn encode(message: String) {
         // Return binary string value of byte
         let binary_value = &format!("{:b}", c);
 
-        // Calculate length of binary value (binary lengths have no leading 0's)
+        // Calculate length of binary value 
         let binary_len = binary_value.len();
 
         // Add missing 0's 
