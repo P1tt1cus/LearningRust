@@ -29,6 +29,7 @@ fn change(some_string: &mut String) {
 
 
 fn first_word(s: &String) -> &str {
+    
     let bytes = s.as_bytes();
 
     for (i, &item) in bytes.iter().enumerate() {
